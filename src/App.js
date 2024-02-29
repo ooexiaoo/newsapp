@@ -5,14 +5,10 @@ import News from "./components/News";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoadingBar from "react-top-loading-bar";
 
-const App = (props) => {
-  const [pageSize, setPageSize] = useState(6);
-  const [apiKey, setApiKey] = useState(process.env.REACT_APP_NEWS_API);
+const App = () => {
+  const pageSize = useState(6);
+  const apiKey = useState(process.env.REACT_APP_NEWS_API);
   const [progress, setProgress] = useState(0);
- 
-  const handleProgress = (progress) => {
-    setProgress(progress);
-  };
 
     return (
       <div>

@@ -9,8 +9,6 @@ const News = (props) => {
   const [loading, setloading] = useState(true)
   const [page, setPage] = useState(1)
   const [totalResults, settotalResults] = useState(0)
-  /* document.title = `💩 news - ${capitalizeFirstLetter(
-    props.category */
 
   const capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -30,18 +28,11 @@ const News = (props) => {
     props.setProgress(100);
   }
   useEffect(() => {
+    document.title = `💩 news - ${capitalizeFirstLetter(
+    props.category)}`;
     updateNews();
+    // eslint-disable-next-line
   }, [])
-
-/*   const handlePrevClick = async () => {
-    setPage(page-1)
-    updateNews();
-  };
-
-  const handleNextClick = async () => {
-    setPage(page+1)
-    updateNews();
-  }; */
 
   const fetchMoreData = async () => {
     setPage(page+1)
