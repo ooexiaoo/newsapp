@@ -33,7 +33,7 @@ const News = (props) => {
     updateNews();
   }, [])
 
-  const handlePrevClick = async () => {
+/*   const handlePrevClick = async () => {
     setPage(page-1)
     updateNews();
   };
@@ -41,7 +41,7 @@ const News = (props) => {
   const handleNextClick = async () => {
     setPage(page+1)
     updateNews();
-  };
+  }; */
 
   const fetchMoreData = async () => {
     setPage(page+1)
